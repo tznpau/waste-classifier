@@ -74,7 +74,7 @@ def train(
         loss_fn: torch.nn.Module,
         epochs: int,
         device: torch.device
-) -> Dict[str, List[float]]:
+) -> Dict[str, List]:
     """
     Trains and tests a model.
     Passes a target module through train_step() and test_step() for a number of epochs; Calculates, prints and stores evaluation metrics.
@@ -85,6 +85,8 @@ def train(
         "test_loss": [],
         "test_acc": []
     }
+
+    model.to(device)
 
     for epoch in tqdm(range(epochs)):
         train_loss, train_acc = train_step(
