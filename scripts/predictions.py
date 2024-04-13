@@ -3,6 +3,7 @@ Contains code to handle model predictions across the dataset.
 """
 import pathlib
 import torch
+import torchvision
 
 from PIL import Image
 from timeit import default_timer as timer
