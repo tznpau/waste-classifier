@@ -1,7 +1,6 @@
 import torch
 from typing import Dict, List, Tuple
 from tqdm.auto import tqdm
-from torch.optim.lr_scheduler import StepLR
 
 def train_step(
         model: torch.nn.Module,
